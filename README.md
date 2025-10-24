@@ -60,7 +60,8 @@ Example: <br>
 𝑛 = [0,..,999] <br>
 M = 999 (log ₁₀​(999) = 2) <br>
 𝑘 = 2 <br>
-T(n) = O(2n) = O(n) <br><br>
+T(n) = O(2n) = O(n) <br>
+*Works better than merge sort and quick sort for limited numbers.* <br><br>
 **TIP: For decimal numbers, the base is 10 and for binary, the base is 2.** <br><br>
 Result: <br>
 ```
