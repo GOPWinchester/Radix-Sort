@@ -57,7 +57,7 @@ If the data are numbers up to a maximum value of 𝑀
 𝑘 = log ₁₀​(M)
 ```
 Example: <br>
-𝑛 = [0,..,1000] <br>
+𝑛 = [0,..,999] <br>
 M = 999 (log ₁₀​(999) = 2) <br>
 𝑘 = 2 <br><br>
 T(n) = O(2n) = O(n)
