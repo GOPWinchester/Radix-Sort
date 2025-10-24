@@ -45,3 +45,24 @@ We use counting sort for this sort. <br>
 The difference is that at each step we use 10 buckets to sort each place value. <br>
 And each step we sort a place value. <br>
 Each time enumeration sort is called, a place value is sorted.
+<br><br>
+## Time Complexity
+𝑛: Number of elements <br>
+𝑘: Total number of digits in each number (or length of the largest number depending on the base) <br>
+```
+T(n) = O(𝑘 × 𝑛)
+```
+If the data are numbers up to a maximum value of 𝑀
+```
+𝑘 = log ₁₀​(M)
+```
+Example: <br>
+𝑛 = [0,..,1000] <br>
+M = 999 (log ₁₀​(999) = 2) <br>
+𝑘 = 2 <br><br>
+T(n) = O(2n) = O(n)
+**TIP: For decimal numbers, the base is 10 and for binary, the base is 2.** <br><br>
+Result: <br>
+```
+T(𝑛) = O(log ₁₀​(M) × 𝑛) ≈ O(𝑘 × 𝑛)
+```
