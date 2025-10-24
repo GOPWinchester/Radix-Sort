@@ -1,6 +1,34 @@
 # Radix-Sort
 Radix sort in Python lang
 <br><br>
+## Code
+```python
+def counting_sort(list, exp):
+    bukets = [[] for _ in range(10)]
+    for e in list:
+        bukets[((e // exp) % 10)].append(e)
+    count = 0
+    new_list = []
+    while count < 10:
+        if len(bukets[count]):
+            new_list.append(bukets[count].pop(0))
+        else: count+=1
+    for i in range(len(new_list)): list[i] = new_list[i]
+
+def radix_sort(list):
+    max_num = max(list)
+    exp = 1
+    while max_num // exp > 0:
+        counting_sort(list, exp)
+        exp *= 10
+
+if __name__ == "__main__":
+    nums = [21, 345, 13, 101, 50, 234, 1]
+    print(nums)
+    radix_sort(nums)
+    print(nums)
+```
+<br><br>
 ## Example
 To understand better, let's start with an example. <br>
 Example We want to sort [21, 345, 13, 101, 50, 234, 1] <br>
@@ -11,3 +39,9 @@ We arrange digit by digit! <br>
 ![1st unit](./images/2.png)
 <br><br> And the third unit <br>
 ![1st unit](./images/3.png)
+<br><br>
+## Code explanation
+We use counting sort for this sort. <br>
+The difference is that at each step we use 10 buckets to sort each place value. <br>
+And each step we sort a place value. <br>
+Each time enumeration sort is called, a place value is sorted.
