@@ -17,7 +17,8 @@ def radix_sort(list):
         counting_sort(list, exp)
         exp *= 10
 
-nums = [170, 45, 75, 90, 802, 24, 2, 66]
-print(nums)
-radix_sort(nums)
-print(nums)
+if __name__ == "__main__":
+    nums = [21, 345, 13, 101, 50, 234, 1]
+    print(nums)
+    radix_sort(nums)
+    print(nums)
